@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSE Portal</title>
+    <meta name="description" content="Educational Pathfinder Portal" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <i data-lucide="graduation-cap"></i>
+          </div>
+          <span class="logo-text">CSEDept Subjects</span>  
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html" class="nav-link">
+                <i data-lucide="book"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">
+                <i data-lucide="info"></i>
+                <span>About</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">
+                <i data-lucide="mail"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <div class="card subject-selector">
+          <div class="card-header">
+            <div class="icon-circle">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+            <h2 class="card-title">Subject Details</h2>
+            <p class="card-description">Select your branch, year, and semester to view subject details</p>
+          </div>
+          <div class="card-content">
+            <form id="subjectSelectionForm" class="selection-form">
+              <div class="form-group">
+                <label for="branch">Branch</label>
+                <select id="branch" required>
+                  <option value="" disabled selected>Select your branch</option>
+                  <!-- Options will be populated by JavaScript -->
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="year">Year</label>
+                <select id="year" disabled required>
+                  <option value="" disabled selected>Select your year</option>
+                  <!-- Options will be populated by JavaScript -->
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="semester">Semester</label>
+                <select id="semester" disabled required>
+                  <option value="" disabled selected>Select your semester</option>
+                  <!-- Options will be populated by JavaScript -->
+                </select>
+              </div>
+
+              <button type="submit" id="viewSubjectsBtn" class="btn btn-primary" disabled>
+                View Subjects
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="subjects-container" id="subjectsContainer" style="display: none;">
+          <h2 class="subjects-title">Subjects</h2>
+          <div class="subjects-grid" id="subjectsGrid">
+            <!-- Subject cards will be dynamically added here -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3>CSEDept subjects</h3>
+            <p>Helping students navigate their academic journey with ease.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#">Academic Calendar</a></li>
+              <li><a href="#">Faculty Directory</a></li>
+              <li><a href="#">Campus Map</a></li>
+              <li><a href="#">Help Center</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <address>
+              <p>IGIT Sarang</p>
+              <p>Email: info@csedept.edu</p>
+              <p>Phone: (123) 456-7890</p>
+            </address>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="currentYear"></span> CSEDept. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
