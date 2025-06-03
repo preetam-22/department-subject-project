@@ -665,7 +665,7 @@ const subjectData = [
       name: "Mobile App Development",
       code: "CSMA3204",
       credit: "3",
-      teacher: "Mr. A. K. Das",
+      teacher: "Mr. A. K. Dash",
       syllabus: ["Android Basics", "Layouts", "Intents", "Database", "Firebase"],
       resources: [{ title: "Android Dev Docs", link: "#" }],
     },
